@@ -10,7 +10,6 @@ import {
 import * as timers from "ext:deno_web/02_timers.js";
 import * as httpClient from "ext:deno_fetch/22_http_client.js";
 import * as console from "ext:deno_console/01_console.js";
-import * as ffi from "ext:deno_ffi/00_ffi.js";
 import * as net from "ext:deno_net/01_net.js";
 import * as tls from "ext:deno_net/02_tls.js";
 import * as serve from "ext:deno_http/00_serve.ts";
@@ -252,7 +251,7 @@ const denoNs = {
 const unstableIds = {
   broadcastChannel: 1,
   cron: 2,
-  ffi: 3,
+  // ffi: 3,
   fs: 4,
   http: 5,
   kv: 6,
@@ -272,13 +271,13 @@ denoNsUnstableById[unstableIds.cron] = {
   cron: cron.cron,
 };
 
-denoNsUnstableById[unstableIds.ffi] = {
-  dlopen: ffi.dlopen,
-  UnsafeCallback: ffi.UnsafeCallback,
-  UnsafePointer: ffi.UnsafePointer,
-  UnsafePointerView: ffi.UnsafePointerView,
-  UnsafeFnPointer: ffi.UnsafeFnPointer,
-};
+// denoNsUnstableById[unstableIds.ffi] = {
+//   dlopen: ffi.dlopen,
+//   UnsafeCallback: ffi.UnsafeCallback,
+//   UnsafePointer: ffi.UnsafePointer,
+//   UnsafePointerView: ffi.UnsafePointerView,
+//   UnsafeFnPointer: ffi.UnsafeFnPointer,
+// };
 
 denoNsUnstableById[unstableIds.fs] = {
   flock: fs.flock,
@@ -325,11 +324,11 @@ const denoNsUnstable = {
   umask: fs.umask,
   HttpClient: httpClient.HttpClient,
   createHttpClient: httpClient.createHttpClient,
-  dlopen: ffi.dlopen,
-  UnsafeCallback: ffi.UnsafeCallback,
-  UnsafePointer: ffi.UnsafePointer,
-  UnsafePointerView: ffi.UnsafePointerView,
-  UnsafeFnPointer: ffi.UnsafeFnPointer,
+  // dlopen: ffi.dlopen,
+  // UnsafeCallback: ffi.UnsafeCallback,
+  // UnsafePointer: ffi.UnsafePointer,
+  // UnsafePointerView: ffi.UnsafePointerView,
+  // UnsafeFnPointer: ffi.UnsafeFnPointer,
   UnsafeWindowSurface: webgpuSurface.UnsafeWindowSurface,
   flock: fs.flock,
   flockSync: fs.flockSync,
