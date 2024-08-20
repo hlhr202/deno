@@ -1616,7 +1616,6 @@ impl CliOptions {
 
     if *DENO_FUTURE {
       let future_features = [
-        deno_runtime::deno_ffi::UNSTABLE_FEATURE_NAME.to_string(),
         deno_runtime::deno_fs::UNSTABLE_FEATURE_NAME.to_string(),
         deno_runtime::deno_webgpu::UNSTABLE_FEATURE_NAME.to_string(),
       ];

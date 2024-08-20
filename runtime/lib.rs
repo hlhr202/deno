@@ -65,11 +65,11 @@ pub static UNSTABLE_GRANULAR_FLAGS: &[(
     "Enable unstable Deno.cron API",
     2,
   ),
-  (
-    deno_ffi::UNSTABLE_FEATURE_NAME,
-    "Enable unstable FFI APIs",
-    3,
-  ),
+  // (
+  //   deno_ffi::UNSTABLE_FEATURE_NAME,
+  //   "Enable unstable FFI APIs",
+  //   3,
+  // ),
   (
     deno_fs::UNSTABLE_FEATURE_NAME,
     "Enable unstable file system APIs",

@@ -54,14 +54,14 @@ impl deno_fetch::FetchPermissions for Permissions {
   }
 }
 
-impl deno_ffi::FfiPermissions for Permissions {
-  fn check_partial(
-    &mut self,
-    _path: Option<&Path>,
-  ) -> Result<(), deno_core::error::AnyError> {
-    unreachable!("snapshotting!")
-  }
-}
+// impl deno_ffi::FfiPermissions for Permissions {
+//   fn check_partial(
+//     &mut self,
+//     _path: Option<&Path>,
+//   ) -> Result<(), deno_core::error::AnyError> {
+//     unreachable!("snapshotting!")
+//   }
+// }
 
 impl deno_napi::NapiPermissions for Permissions {
   fn check(
@@ -241,7 +241,7 @@ pub fn create_runtime_snapshot(
     deno_broadcast_channel::deno_broadcast_channel::init_ops_and_esm(
       deno_broadcast_channel::InMemoryBroadcastChannel::default(),
     ),
-    deno_ffi::deno_ffi::init_ops_and_esm::<Permissions>(),
+    // deno_ffi::deno_ffi::init_ops_and_esm::<Permissions>(),
     deno_net::deno_net::init_ops_and_esm::<Permissions>(None, None),
     deno_tls::deno_tls::init_ops_and_esm(),
     deno_kv::deno_kv::init_ops_and_esm(deno_kv::sqlite::SqliteDbHandler::<
