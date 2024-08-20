@@ -10,7 +10,8 @@ use std::ffi::c_void;
   target_os = "linux",
   target_os = "macos",
   target_os = "freebsd",
-  target_os = "openbsd"
+  target_os = "openbsd",
+  target_os = "android"
 ))]
 use std::ptr::NonNull;
 
@@ -110,7 +111,7 @@ fn raw_window(
   Ok((win_handle, display_handle))
 }
 
-#[cfg(any(target_os = "linux", target_os = "freebsd", target_os = "openbsd"))]
+#[cfg(any(target_os = "linux", target_os = "freebsd", target_os = "openbsd", target_os = "android"))]
 fn raw_window(
   system: &str,
   window: *const c_void,
