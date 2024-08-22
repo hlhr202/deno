@@ -33,7 +33,7 @@ members = [
   "tests/napi",
   "tests/util/server",
 ]
-exclude = ["tests/util/std/hash/_wasm"]
+exclude = ["tests/util/std/hash/_wasm", ".gitmodules"]
 
 [workspace.package]
 authors = ["the Deno authors"]
